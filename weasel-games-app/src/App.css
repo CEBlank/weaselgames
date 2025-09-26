@@ -7,13 +7,9 @@
 }
 
 .navbar {
-  background-color: #68287b;
+  background-color: #853A98;
 }
 
-.LogoWeasel {
-  max-height: 50%;
-}
-
-h1 {
+h1, li {
   color: #2A1101;
 }
