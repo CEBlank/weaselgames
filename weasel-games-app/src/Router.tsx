@@ -1,3 +1,5 @@
+//this file may become redundant! Yay!
+
 import { Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 
