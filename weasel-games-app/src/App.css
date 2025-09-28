@@ -6,10 +6,20 @@
   background-color: #D7E3F4;
 }
 
-.navbar {
+title {
   background-color: #853A98;
 }
 
-h1, li {
-  color: #2A1101;
+header {
+  background-color: #853A98;
+  color: #D8e3f5;
+}
+
+a {
+  color: #D8e3f5;
+}
+
+
+a:active {
+  color: #fff
 }
