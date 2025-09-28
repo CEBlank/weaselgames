@@ -15,11 +15,18 @@ header {
   color: #D8e3f5;
 }
 
+button {
+  color:#D8e3f5;
+}
+
+button:hover {
+  color:#fff;
+}
+
 a {
   color: #D8e3f5;
 }
 
-
-a:active {
-  color: #fff
+a:hover {
+  color: #fff;
 }
