@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import './App.css'
 import {
   Dialog,
   DialogBackdrop,
@@ -13,7 +14,7 @@ import {
   TabPanel,
   TabPanels,
 } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export const navigation = {
   categories: [
@@ -152,7 +153,7 @@ export default function Example() {
 
             {/* Links */}
             <TabGroup className="mt-2">
-              <div className="border-b border-gray-200">
+              <div id="sectionList" className="border-b border-gray-200">
                 <TabList className="-mb-px flex space-x-8 px-4">
                   {navigation.categories.map((category) => (
                     <Tab
