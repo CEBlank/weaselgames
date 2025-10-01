@@ -112,9 +112,9 @@ export const navigation = {
     },
   ],
   pages: [
-    { name: 'Events', href: './events' },
-    { name: 'Community', href: './community' },
-    { name: 'About', href: './about' },
+    { name: 'Events', href: '/events' },
+    { name: 'Community', href: '/community' },
+    { name: 'About', href: '/about' },
   ],
 }
 
