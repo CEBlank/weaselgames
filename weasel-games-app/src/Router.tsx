@@ -1,0 +1,28 @@
+//this file may become redundant! Yay! - update, nope, was not 
+
+import { Routes, Route, Link } from 'react-router-dom';
+//import ReactDOM from 'react-dom/client';
+
+import Nav from './Nav' //why this is working... Is a mystery
+
+import { Home } from './home'
+import { Shop } from './shop'
+import { Events } from './events'
+import { About } from './about'
+import { Community } from './community'
+
+export default function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<Nav/>}>
+        <Route index element={<Home/>}/>
+        <Route path="*" element={<Home/>}/>
+        <Route path="/shop" element={<Shop/>}/>
+        <Route path="/events" element={<Events/>}/>
+        <Route path="/community" element={<Community/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/" element={<Home/>}/>
+      </Route>
+    </Routes>
+  )
+}
