@@ -8,7 +8,6 @@ import './App.css';
 import Router from './Router';
 
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <BrowserRouter>

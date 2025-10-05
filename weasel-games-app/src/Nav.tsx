@@ -17,7 +17,10 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 //import { useLocation }  from 'react-router-dom';
 
+
+
 const navLinks = {
+
   categories: [
     //TTRPGs
     {
@@ -166,6 +169,8 @@ const navLinks = {
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
+
+  console.log('Nav Loaded')
 
   return(
     <div id='topDiv' className='bg-dark'>

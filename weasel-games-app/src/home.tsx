@@ -1,5 +1,7 @@
 export function Home() {
 
+  console.log('Home Loaded')
+
   return (
     <>
       <div className='home'>
