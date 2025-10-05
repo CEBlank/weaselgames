@@ -1,5 +1,5 @@
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 //import ReactDOM from 'react-dom/client';
 
 import Nav from './Nav'
