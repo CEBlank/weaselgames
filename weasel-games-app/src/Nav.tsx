@@ -295,7 +295,7 @@ const Nav = () => {
                 <span className="sr-only">Weasel Games</span>
                 <img
                   alt="Weasel Games"
-                  src="./images/ermineLogo.png"
+                  src={"./public/ermineLogo.png"}
                   className="w-20 h-20"
                 />
               </a>
