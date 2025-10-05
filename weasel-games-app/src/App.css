@@ -6,13 +6,9 @@
   background-color: #D7E3F4;
 }
 
-title {
-  background-color: #853A98;
-}
-
 header {
   background-color: #853A98;
-  color: #D8e3f5;
+  color: #853A98;
 }
 
 button {
@@ -23,11 +19,68 @@ button:hover {
   color:#fff;
 }
 
-a {
+#pages {
+  color:#D8e3f5;
+}
+
+#pages:hover {
+  color:#fff;
+}
+
+#cart {
   color: #D8e3f5;
 }
 
-a:hover {
+#cart:hover {
   color: #fff;
 }
+
+#search {
+  color: #D8e3f5;
+}
+
+#search:hover {
+  color: #fff;
+}
+
+#login {
+  color: #D8e3f5;
+}
+
+#login:hover {
+  color: #fff;
+}
+
+
+#createAccount {
+  color: #D8e3f5;
+}
+
+#createAccount:hover {
+  color: #fff;
+}
+
+
+a {
+  color: #853A98;
+}
+
+a:hover {
+  color: #4f7aaa;
+}
+
+#navPanel {
+
+}
+
+#category {
+  font-weight: bold;
+}
+
+#itemLine{
+  color: #853A98;
+}
+
+
+
 

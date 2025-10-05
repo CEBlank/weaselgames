@@ -1,9 +1,8 @@
-//this file may become redundant! Yay! - update, nope, was not 
 
 import { Routes, Route, Link } from 'react-router-dom';
 //import ReactDOM from 'react-dom/client';
 
-import Nav from './Nav' //why this is working... Is a mystery
+import Nav from './Nav'
 
 import { Home } from './home'
 import { Shop } from './shop'

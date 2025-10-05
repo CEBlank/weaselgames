@@ -14,8 +14,8 @@ import {
   TabPanel,
   TabPanels,
 } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon, HomeIcon, CalendarDateRangeIcon } from '@heroicons/react/24/outline';
-import { useLocation }  from 'react-router-dom';
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+//import { useLocation }  from 'react-router-dom';
 
 const navLinks = {
   categories: [
@@ -165,77 +165,66 @@ const navLinks = {
 }
 
 const Nav = () => {
-  const [selectedPage, setSelectedPage] = useState("home");
-  const location = useLocation();
   const [open, setOpen] = useState(false)
 
   return(
-    <div className='bg-white'>
+    <div id='topDiv' className='bg-dark'>
   
-    <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
-      <DialogBackdrop
-      transition
-      className="fixed inset bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0" />
-
-    <div className="fixed inset-0 z-40 flex">
-
-      <DialogPanel 
-      transition
-      className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-purple pb-12 shadow-x1 transition duration-300 ease-in-out data-closed:-translate-x-full">
-
-        <div className="flex px-4 pt-5 pb-2">
-          <button
-            type="button"
-            onClick={() => setOpen(false)}
-            className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
+        />
+        <div className="fixed inset-0 z-40 flex">
+          <DialogPanel
+            transition
+            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
-            <span className="absolute -inset-0.5" />
-            <span className="sr-only">Close menu</span>
-            <XMarkIcon aria-hidden="true" className="size-6" />
-          </button>
-        </div>
-
-        {/* Links Output - Navigation by Tab Grouping */}
-          <TabGroup className='mt-2'>
-            <div className='border-b border-purple-200'>
-            <TabList className='-mb-px flex space-x-8 px-4'>
-              {navLinks.categories.map((category) => (
-                <Tab 
-                key={category.name}
-                className='flex-1 border-b-2 border-transparent px-1 py-4 text-base-font-medium whitespace-nowrap data-selected:border-indigo-600' >
-                  {category.name}
-                </Tab>
-              ))}
-            </TabList>
+            <div className="flex px-4 pt-5 pb-2">
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+              >
+                <span className="absolute -inset-0.5" />
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon aria-hidden="true" className="size-6" />
+              </button>
             </div>
 
-            {/* Tab Panels for Groups */}
-
-            <TabPanels as={Fragment}>
-              {navLinks.categories.map((category) => (
-                <TabPanel key={category.name} className='space-y-10 px-4 pt-10 pb-8'>
-
-                  {/* Feature Links - Picture Placeholders */}
-
-                  <div className='grid grid-cols-2 gap-x-4'>
-                    {category.featured.map((item) => (
-                      <div key={item.name} className='group relative text-sm' >
-                        <img className='aspect-square w-full rounded-lg bg-grey-100 object-cover group-hover:opacity-75' />
-                        <a href={item.href} className="mt-6 block font-medium text-gray-100">
+            {/* Links */}
+            <TabGroup className="mt-2">
+              <div className="border-b border-gray-200">
+                <TabList className="-mb-px flex space-x-8 px-4">
+                  {navLinks.categories.map((category) => (
+                    <Tab
+                      key={category.name}
+                      className="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 data-selected:border-indigo-600 data-selected:text-indigo-600"
+                    >
+                      {category.name}
+                    </Tab>
+                  ))}
+                </TabList>
+              </div>
+              <TabPanels as={Fragment}>
+                {navLinks.categories.map((category) => (
+                  <TabPanel key={category.name} className="space-y-10 px-4 pt-10 pb-8">
+                    <div className="grid grid-cols-2 gap-x-4">
+                      {category.featured.map((item) => (
+                        <div key={item.name} className="group relative text-sm">
+                          <img
+                            className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
+                          />
+                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
                             <span aria-hidden="true" className="absolute inset-0 z-10" />
                             {item.name}
-                        </a>
-                        <p aria-hidden="true" className="mt-1">
-                          Shop now
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                    {/* Section Links - Menu of Links */}
-                  {category.sections.map((section) => (
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                    {category.sections.map((section) => (
                       <div key={section.name}>
-                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium">
+                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
                           {section.name}
                         </p>
                         <ul
@@ -245,7 +234,7 @@ const Nav = () => {
                         >
                           {section.items.map((item) => (
                             <li key={item.name} className="flow-root">
-                              <a href={item.href} className="-m-2 block p-2 ">
+                              <a href={item.href} className="-m-2 block p-2 text-gray-500">
                                 {item.name}
                               </a>
                             </li>
@@ -253,38 +242,36 @@ const Nav = () => {
                         </ul>
                       </div>
                     ))}
-                </TabPanel>
-              ))}
-            </TabPanels>
-          </TabGroup>
+                  </TabPanel>
+                ))}
+              </TabPanels>
+            </TabGroup>
 
-          {/* No-drop Links */}
-          <div>
-            {navLinks.pages.map((page) => (
-              <div key={page.name} className='flow-root' >
-                <a href={page.name} className='-m-2 p-2 font-medium' >
-                  {page.name}
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              {navLinks.pages.map((page) => (
+                <div key={page.name} className="flow-root">
+                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                    {page.name}
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              <div className="flow-root">
+                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                  Sign in
                 </a>
               </div>
-            ))}
-          </div>
-
-          {/* Login, Search, and Cart */}
-          <div className='space-y-6 border-t border-gray-200 px-4 py-6' >
-            <div className='flow-root'>
-              <a href='#' className='-m-2 block p-2 font-medium' >
-                Sign In
-              </a>
+              <div className="flow-root">
+                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                  Create account
+                </a>
+              </div>
             </div>
-            <div className='flow-root'>
-              <a href='#' className='-m-2 block p-2 font-medium' >
-                Create Account
-              </a>
-            </div>
-          </div>
-        </DialogPanel>
-      </div>
-    </Dialog>
+          </DialogPanel>
+        </div>
+      </Dialog>
 
     {/* Header with Nav Bar */}
     <header className='relative'>
@@ -302,7 +289,7 @@ const Nav = () => {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
 
-    {/* Logo */}
+            {/* Logo */}
             <div className="ml-4 flex lg:ml-0">
               <a href="/">
                 <span className="sr-only">Weasel Games</span>
@@ -316,10 +303,10 @@ const Nav = () => {
 
       {/* The Real PopOvers */}
             <PopoverGroup className='hidden lg:ml-8 lg:block lg:self-stretch'>
-              <div>
+              <div id="navPanel" className='flex h-full space-x-8'>
                 {navLinks.categories.map((category) => (
                   <Popover key={category.name} className='flex' >
-                    <div className='relative-flex' >
+                    <div className='relative flex' >
                       <PopoverButton className='group relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out' >
                         {category.name}
                         <span
@@ -328,14 +315,95 @@ const Nav = () => {
                         />
                       </PopoverButton>
                     </div>
+                    <PopoverPanel
+                        transition
+                        className="absolute inset-x-0 top-full z-20 w-full bg-white text-sm transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+                    >
+                        <div aria-hidden="true" className="absolute inset-0 top-1/2 bg-white shadow-sm" />
+                        <div className="relative bg-white">
+                          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                              <div id='category' className="col-start-2 grid grid-cols-2 gap-x-8">
+                                {category.featured.map((item) => (
+                                  <div key={item.name} className="group relative text-base sm:text-sm">
+                                    <img
+                                      className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
+                                    />
+                                    <a href={item.href} className="mt-6 block font-medium">
+                                      <span aria-hidden="true" className="absolute inset-0 z-10" />
+                                      {item.name}
+                                    </a>
+                                  </div>
+                                ))}
+                              </div>
+                              <div id='section' className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                {category.sections.map((section) => (
+                                  <div key={section.name}>
+                                    <p id={`${section.name}-heading`} className="font-bold">
+                                      {section.name}
+                                    </p>
+                                    <ul
+                                      role="list"
+                                      aria-labelledby={`${section.name}-heading`}
+                                      className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                    >
+                                      {section.items.map((item) => (
+                                        <li id='itemLine' key={item.name} className="flex">
+                                          <a href={item.href} className="hover:text-gray-800">
+                                            {item.name}
+                                          </a>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </PopoverPanel>
                   </Popover>
-
+                ))}
+                {navLinks.pages.map((page) => (
+                  <a id='pages' key={page.name}
+                  href={page.href}
+                  className='flex items-center text-sm font-medium'>
+                    {page.name}
+                  </a>
                 ))}
               </div>
-
-
             </PopoverGroup>
+            <div  className="ml-auto flex items-center">
+              <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                <a id='login' href="#" className="text-sm font-medium">
+                  Sign in
+                </a>
+                <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                <a id='createAccount' href="#" className="text-sm font-medium">
+                  Create account
+                </a>
+              </div>
 
+              {/* Search */}
+              <div className="flex lg:ml-6">
+                <a id='search' href="#" className="p-2">
+                  <span className="sr-only">Search</span>
+                  <MagnifyingGlassIcon aria-hidden="true" className="size-6" />
+                </a>
+              </div>
+
+              {/* Cart */}
+              <div className="ml-4 flow-root lg:ml-6">
+                <a id='cart' href="#" className="group -m-2 flex items-center p-2">
+                  <ShoppingBagIcon
+                    aria-hidden="true"
+                    className="size-6 shrink-0"
+                  />
+                  <span className="ml-2 text-sm font-medium">0</span>
+                  <span className="sr-only">items in cart, view bag</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
