@@ -13,14 +13,14 @@ import { Community } from './community'
 export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Nav/>}>
-        <Route index element={<Home/>}/>
-        <Route path="*" element={<Home/>}/>
-        <Route path="/shop" element={<Shop/>}/>
-        <Route path="/events" element={<Events/>}/>
-        <Route path="/community" element={<Community/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/" element={<Home/>}/>
+      <Route path="/" element={<Nav />}>
+        <Route index element={<Home />}/>
+        <Route path="*" element={<Home />}/>
+        <Route path="/shop" element={<Shop />}/>
+        <Route path="/events" element={<Events />}/>
+        <Route path="/community" element={<Community />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/" element={<Home />}/>
       </Route>
     </Routes>
   )

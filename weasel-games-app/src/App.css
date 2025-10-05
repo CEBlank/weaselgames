@@ -60,7 +60,6 @@ button:hover {
   color: #fff;
 }
 
-
 a {
   color: #853A98;
 }
@@ -81,6 +80,8 @@ a:hover {
   color: #853A98;
 }
 
-
+h1 {
+  font-size: xx-large;
+}
 
 

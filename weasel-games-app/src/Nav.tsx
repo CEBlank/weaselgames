@@ -126,7 +126,7 @@ const navLinks = {
       sections: [
         {
           id: 'ttrpgEvents',
-          name: 'TTRPG Events Schedule',
+          name: 'TTRPG Events',
           items: [
             { name: 'Dungeons & Dragons: Adventure League', href: '#' },
             { name: 'Pathfinder', href: '#' },
@@ -136,7 +136,7 @@ const navLinks = {
         },
         {
           id: 'cardgameEvents',
-          name: 'Card Games Schedule',
+          name: 'Card Games Events',
           items: [
             { name: 'Magic the Gathering', href: '#' },
             { name: 'Yu-Gi-Oh', href: '#' },
@@ -151,7 +151,7 @@ const navLinks = {
             { name: 'Open Board Games', href: '#' },
             { name: 'Root', href: '#' },
             { name: 'Open Painting', href: '#' },
-            { name: 'Trans Game Night', href: '#' },
+            { name: 'Special Events', href: '#' },
           ]
         }
       ]
@@ -295,7 +295,7 @@ const Nav = () => {
                 <span className="sr-only">Weasel Games</span>
                 <img
                   alt="Weasel Games"
-                  src={"./public/ermineLogo.png"}
+                  src={"ermineLogo.png"}
                   className="w-20 h-20"
                 />
               </a>

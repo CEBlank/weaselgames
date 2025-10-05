@@ -2,7 +2,13 @@ export function Home() {
 
   return (
     <>
-    Home Page
+      <div className='home'>
+        <div>
+          <h1>
+            Home Page
+          </h1>
+        </div>
+      </div>
     </>
   )
 }
