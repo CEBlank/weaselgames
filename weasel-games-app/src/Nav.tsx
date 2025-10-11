@@ -170,7 +170,7 @@ const navLinks = {
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
-  console.log('Nav Loaded')
+ // console.log('Nav Loaded')
 
   return(
     <div id='topDiv' className='bg-dark'>

@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 //import ReactDOM from 'react-dom/client';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 import Nav from './Nav'
 
@@ -12,6 +13,7 @@ import { Community } from './community'
 
 export default function Router() {
   return (
+  <>
     <Routes>
       <Route path="/" element={<Nav />}>
         <Route index element={<Home />}/>
@@ -23,5 +25,12 @@ export default function Router() {
         <Route path="/" element={<Home />}/>
       </Route>
     </Routes>
+    <SignedOut>
+      <SignInButton />
+    </SignedOut>
+    <SignedIn>
+      <UserButton />
+    </SignedIn>
+  </>
   )
 }
