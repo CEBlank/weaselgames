@@ -214,7 +214,7 @@ const Nav = () => {
               <TabPanels as={Fragment}>
                 {navLinks.categories.map((category) => (
                   <TabPanel key={category.name} className="space-y-10 px-4 pt-10 pb-8">
-                    <div className="grid grid-cols-2 gap-x-4">
+                    <div className="grid grid-cols-2 gap-x-4 sm:grid-cols-1">
                       {category.featured.map((item) => (
                         <div key={item.name} className="group relative text-sm">
                           <img
@@ -228,14 +228,14 @@ const Nav = () => {
                       ))}
                     </div>
                     {category.sections.map((section) => (
-                      <div key={section.name}>
+                      <div className='' key={section.name}>
                         <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
                           {section.name}
                         </p>
                         <ul
                           role="list"
                           aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                          className="mt-6 flex flex-col space-y-6"
+                          className="mt-6 flex flex-col space-y-6 md:flex"
                         >
                           {section.items.map((item) => (
                             <li key={item.name} className="flow-root">
@@ -308,7 +308,7 @@ const Nav = () => {
 
       {/* The Real PopOvers */}
             <PopoverGroup className='hidden lg:ml-8 lg:block lg:self-stretch'>
-              <div id="navPanel" className='flex h-full space-x-8'>
+              <div id="navPanel" className='flex h-full space-x-8 md:flex'>
                 {navLinks.categories.map((category) => (
                   <Popover key={category.name} className='flex' >
                     <div className='relative flex' >
