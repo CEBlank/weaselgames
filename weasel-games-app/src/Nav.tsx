@@ -270,11 +270,6 @@ const Nav = () => {
                   Sign in
                 </a>
               </div>
-              <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                  Create account
-                </a>
-              </div>
             </div>
           </DialogPanel>
         </div>
