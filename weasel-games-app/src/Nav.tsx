@@ -16,6 +16,7 @@ import {
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import LoginButton from './LoginButton';
+import LogoutButton from './LogOutButton';
 //import { useLocation }  from 'react-router-dom';
 
 
@@ -171,7 +172,7 @@ const navLinks = {
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
- // console.log('Nav Loaded')
+  console.log('Nav Loaded')
 
   return(
     <div id='topDiv' className='bg-dark'>
@@ -384,9 +385,8 @@ const Nav = () => {
                 <a id='login' href="#" className="text-sm font-medium">
                   {LoginButton()}
                 </a>
-                <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                <a id='createAccount' href="#" className="text-sm font-medium">
-                  Create account
+                <a id='logout' href="#" className="text-sm font-medium">
+                  {LogoutButton()}
                 </a>
               </div>
 
