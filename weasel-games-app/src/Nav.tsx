@@ -15,6 +15,7 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import LoginButton from './LoginButton';
 //import { useLocation }  from 'react-router-dom';
 
 
@@ -381,7 +382,7 @@ const Nav = () => {
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 <a id='login' href="#" className="text-sm font-medium">
-                  Sign in
+                  {LoginButton()}
                 </a>
                 <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                 <a id='createAccount' href="#" className="text-sm font-medium">

@@ -3,27 +3,29 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { ClerkProvider } from '@clerk/clerk-react'
-
+import { Auth0Provider } from '@auth0/auth0-react';
 
 //import Nav from './Nav'
 import Router from './Router';
 
-// Import your Publishable Key
-
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error('Missing Publishable Key')
-}
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <BrowserRouter>
-        <ClerkProvider publishableKey={PUBLISHABLE_KEY}> 
-          <Router />
-        </ClerkProvider>
+    <BrowserRouter>
+
+      <Auth0Provider
+          domain="dev-ug4olss0uf5d2qw0.us.auth0.com"
+          clientId="dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0"
+          authorizationParams={{
+            redirect_uri: 'https://weaselgames.vercel.app/'
+          }}
+        >
+
+        <Router />
+
+      </Auth0Provider>
+          
     </BrowserRouter>
   </StrictMode>,
 )

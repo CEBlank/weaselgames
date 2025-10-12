@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 //import ReactDOM from 'react-dom/client';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+
 
 import Nav from './Nav'
 
@@ -25,12 +25,9 @@ export default function Router() {
         <Route path="/" element={<Home />}/>
       </Route>
     </Routes>
-    <SignedOut>
-      <SignInButton />
-    </SignedOut>
-    <SignedIn>
-      <UserButton />
-    </SignedIn>
+
+
+
   </>
   )
 }
