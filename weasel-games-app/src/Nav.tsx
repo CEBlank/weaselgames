@@ -172,7 +172,7 @@ const navLinks = {
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
-  console.log('Nav Loaded')
+ // console.log('Nav Loaded')
 
   return(
     <div id='topDiv' className='bg-dark'>
@@ -231,7 +231,7 @@ const Nav = () => {
                     </div>
                     {category.sections.map((section) => (
                       <div className='' key={section.name}>
-                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
+                        <p id={`${category.id}-${section.id}-heading-mobile`} className="flex flex-col font-medium text-gray-900">
                           {section.name}
                         </p>
                         <ul
