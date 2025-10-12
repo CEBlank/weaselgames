@@ -10,7 +10,6 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import Router from './Router';
 
 // Import your Publishable Key
-import { PUBLISHABLE_KEY } from '.env'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
