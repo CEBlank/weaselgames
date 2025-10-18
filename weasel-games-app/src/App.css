@@ -68,10 +68,6 @@ a:hover {
   color: #4f7aaa;
 }
 
-#navPanel {
-
-}
-
 #category {
   font-weight: bold;
 }
@@ -84,4 +80,16 @@ h1 {
   font-size: xx-large;
 }
 
+#mobileCat {
+  color: #853A98;
+  font-weight: bold;
+}
+
+#mobileSection {
+  color: #853A98;
+}
+
+#mobileItem {
+  color: #853A98;
+}
 

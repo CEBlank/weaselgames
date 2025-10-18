@@ -8,13 +8,12 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
 //import { useLocation }  from 'react-router-dom';
@@ -199,78 +198,63 @@ const Nav = () => {
               </button>
             </div>
 
-            {/* Links */}
-            <TabGroup className="mt-2">
-              <div className="border-b border-gray-200">
-                <TabList className="-mb-px flex space-x-8 px-4">
-                  {navLinks.categories.map((category) => (
-                    <Tab
-                      key={category.name}
-                      className="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 data-selected:border-indigo-600 data-selected:text-indigo-600"
-                    >
-                      {category.name}
-                    </Tab>
-                  ))}
-                </TabList>
-              </div>
-              <TabPanels as={Fragment}>
-                {navLinks.categories.map((category) => (
-                  <TabPanel key={category.name} className="space-y-10 px-4 pt-10 pb-8">
-                    <div className="grid grid-cols-2 gap-x-4 sm:grid-cols-1">
-                      {category.featured.map((item) => (
-                        <div key={item.name} className="group relative text-sm">
-                          <img
-                            className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
-                          />
-                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
-                            <span aria-hidden="true" className="absolute inset-0 z-10" />
-                            {item.name}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
+            {/* MOBILE ONLY Links */}
+
+          <div className="h-screen w-full px-4 pt-32">
+
+          {navLinks.categories.map((category) => (
+            <ul className='menu rounded-box'
+              key={category.name}
+              >
+                <li>
+                    <details>
+                      <summary
+                      id='mobileCat'>
+                        {category.name}
+                      </summary>
                     {category.sections.map((section) => (
-                      <div className='' key={section.name}>
-                        <p id={`${category.id}-${section.id}-heading-mobile`} className="flex flex-col font-medium text-gray-900">
-                          {section.name}
-                        </p>
-                        <ul
-                          role="list"
-                          aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                          className="mt-6 flex flex-col space-y-6 md:flex"
-                        >
-                          {section.items.map((item) => (
-                            <li key={item.name} className="flow-root">
-                              <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                      <ul>
+                        <li>
+                          <details>
+                            <summary 
+                            key={section.name}
+                            id='mobileSection'>
+                              {section.name}
+                            </summary>
+                            <ul>
+                            {section.items.map((item) => (
+                              <li
+                              key={item.name}
+                              id='mobileItem'>
                                 {item.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                              </li>
+                            ))}
+                            </ul>
+                          </details>
+                        </li>
+                      </ul>
                     ))}
-                  </TabPanel>
-                ))}
-              </TabPanels>
-            </TabGroup>
+                    </details>
+                </li>
+                
+            </ul>
+          ))}
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              {navLinks.pages.map((page) => (
-                <div key={page.name} className="flow-root">
-                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
-                    {page.name}
-                  </a>
-                </div>
-              ))}
-            </div>
+          </div>
 
+
+
+
+              {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                  Sign in
+                  Sign In
                 </a>
               </div>
             </div>
+
+          
           </DialogPanel>
         </div>
       </Dialog>
@@ -298,12 +282,12 @@ const Nav = () => {
                 <img
                   alt="Weasel Games"
                   src={"weaselArcherHead.png"}
-                  className="w-15 h-20"
+                  className="w-16 h-20"
                 />
               </a>
             </div>
 
-      {/* The Real PopOvers */}
+      {/* The Main Display popovers - Not Mobile */}
             <PopoverGroup className='hidden lg:ml-8 lg:block lg:self-stretch'>
               <div id="navPanel" className='flex h-full space-x-8 md:flex'>
                 {navLinks.categories.map((category) => (
@@ -325,7 +309,8 @@ const Nav = () => {
                         <div className="relative bg-white">
                           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                             <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                              <div id='category' className="col-start-2 grid grid-cols-2 gap-x-8">
+                            
+                              <div id='category' className="col-start-1 grid grid-cols-2 gap-x-8">
                                 {category.featured.map((item) => (
                                   <div key={item.name} className="group relative text-base sm:text-sm">
                                     <img
@@ -338,6 +323,7 @@ const Nav = () => {
                                   </div>
                                 ))}
                               </div>
+
                               <div id='section' className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                 {category.sections.map((section) => (
                                   <div key={section.name}>
