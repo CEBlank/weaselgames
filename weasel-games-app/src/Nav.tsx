@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import {
   Dialog,
@@ -8,12 +8,8 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
 //import { useLocation }  from 'react-router-dom';
