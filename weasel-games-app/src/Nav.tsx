@@ -280,7 +280,7 @@ const Nav = () => {
 
       <nav aria-label='Top' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8' >
         <div className="border-b border-gray-200">
-          <div className="flex h-16 items-center">
+          <div className="flex h-21 items-center">
             <button
               type="button"
               onClick={() => setOpen(true)}
@@ -297,8 +297,8 @@ const Nav = () => {
                 <span className="sr-only">Weasel Games</span>
                 <img
                   alt="Weasel Games"
-                  src={"weaselArcher.png"}
-                  className="w-20 h-20"
+                  src={"weaselArcherHead.png"}
+                  className="w-15 h-20"
                 />
               </a>
             </div>
