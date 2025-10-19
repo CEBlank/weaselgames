@@ -94,6 +94,8 @@ h1 {
 
 /* Home page CSS */
 
-button {
+#heroBtn {
   background-color: #853A98;
+  border: solid 1pt #572364;
 }
+

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useAuth0 } from '@auth0/auth0-react';
+
 import './App.css'
 import {
   Dialog,
@@ -13,14 +13,10 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
-import { href } from 'react-router';
+
 //import { useLocation }  from 'react-router-dom';
 
-const authUser = {
 
-
-
-}
 
 const navLinks = {
 

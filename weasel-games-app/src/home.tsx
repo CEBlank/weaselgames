@@ -25,9 +25,9 @@ export function Home() {
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                   quasi. In deleniti eaque aut repudiandae et a id nisi.
                 </p>
-                <button className="btn mx-1">CCG Singles Catalog</button>
+                <button id="heroBtn" className="btn mx-1">CCG Singles Catalog</button>
 
-                <button className="btn">Events Schedule</button>
+                <button id="heroBtn" className="btn">Events Schedule</button>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export function Home() {
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                     quasi. In deleniti eaque aut repudiandae et a id nisi.
                   </p>
-                  <button className="btn">Check Events</button>
+                  <button id='heroBtn' className="btn">Check Events</button>
                 </div>
               </div>
             </div>
@@ -72,9 +72,7 @@ export function Home() {
           </div>
 
 
-          <div id="item2" className="carousel-item w-full bg-gray-400">
-
-            
+          <div id="item2" className="carousel-item w-full bg-gray-400">  
             <div className="hero h-100">
               <div className="hero-content flex-col lg:flex-row">
                 <img
@@ -87,12 +85,10 @@ export function Home() {
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                     quasi. In deleniti eaque aut repudiandae et a id nisi.
                   </p>
-                  <button className="btn">Pre-Order</button>
+                  <button id='heroBtn' className="btn">Pre-Order</button>
                 </div>
               </div>
             </div>
-
-
           </div>
 
 
@@ -114,9 +110,9 @@ export function Home() {
           
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" className="btn btn-xs">1</a>
-          <a href="#item2" className="btn btn-xs">2</a>
-          <a href="#item3" className="btn btn-xs">3</a>
+          <a href="#item1" className="btn btn-xs bg-gray-400">1</a>
+          <a href="#item2" className="btn btn-xs bg-gray-400">2</a>
+          <a href="#item3" className="btn btn-xs bg-gray-400">3</a>
         </div>
 
       </div>
