@@ -171,22 +171,25 @@ const Nav = () => {
 
   return(
     <div id='topDiv' className='bg-dark'>
-  
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog 
+        open={open} 
+        onClose={setOpen} 
+        className="relative z-40 lg:hidden">
         <DialogBackdrop
           transition
+          id='dialog'
           className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
         />
         <div className="fixed inset-0 z-40 flex">
           <DialogPanel
             transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
+            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
             <div className="flex px-4 pt-5 pb-2">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+                className="relative -m-2 inline-flex items-center justify-center rounded-md p-2"
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Close menu</span>
@@ -194,52 +197,63 @@ const Nav = () => {
               </button>
             </div>
 
-            {/* MOBILE ONLY Links */}
+            {/* MOBILE NAV */}
+          <div 
+            className="px-4 text-lg"
+            id='mobileMenu'
+          >
+              <div>
+            {navLinks.categories.map((category) => (
+              <ul
+                className='menu text-lg'
+                key={category.name}
+                >
+                  <li>
+                      <details>
+                        <summary
+                        id='mobileCat'>
+                          {category.name}
+                        </summary>
+                      {category.sections.map((section) => (
+                        <ul>
+                          <li>
+                            <details>
+                              <summary 
+                              key={section.name}
+                              className='py-2'
+                              id='mobileSection'>
+                                {section.name}
+                              </summary>
+                              <ul>
+                              {section.items.map((item) => (
+                                <li
+                                key={item.name}
+                                className='py-2'
+                                id='mobileItem'>
+                                  {item.name}
+                                </li>
+                              ))}
+                              </ul>
+                            </details>
+                          </li>
+                        </ul>
+                      ))}
+                      </details>
+                  </li>
+                  
+              </ul>
+            ))}
+            </div>
 
-          <div className="h-screen w-full px-4 pt-32">
-
-          {navLinks.categories.map((category) => (
-            <ul className='menu rounded-box'
-              key={category.name}
-              >
-                <li>
-                    <details>
-                      <summary
-                      id='mobileCat'>
-                        {category.name}
-                      </summary>
-                    {category.sections.map((section) => (
-                      <ul>
-                        <li>
-                          <details>
-                            <summary 
-                            key={section.name}
-                            id='mobileSection'>
-                              {section.name}
-                            </summary>
-                            <ul>
-                            {section.items.map((item) => (
-                              <li
-                              key={item.name}
-                              id='mobileItem'>
-                                {item.name}
-                              </li>
-                            ))}
-                            </ul>
-                          </details>
-                        </li>
-                      </ul>
-                    ))}
-                    </details>
-                </li>
-                
-            </ul>
-          ))}
-
-          </div>
-
-
-
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              {navLinks.pages.map((page) => (
+                <div key={page.name} className="flow-root">
+                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                    {page.name}
+                  </a>
+                </div>
+              ))}
+            </div>
 
               {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
@@ -250,6 +264,9 @@ const Nav = () => {
               </div>
             </div>
 
+          </div>
+
+
           
           </DialogPanel>
         </div>
@@ -259,7 +276,7 @@ const Nav = () => {
     <header className='relative'>
 
       <nav aria-label='Top' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8' >
-        <div className="border-b border-gray-200">
+        <div>
           <div className="flex h-21 items-center">
             <button
               type="button"
