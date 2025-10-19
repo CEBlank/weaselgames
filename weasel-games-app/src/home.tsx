@@ -47,32 +47,25 @@ export function Home() {
                   
                 </button>
 
-
               </div>
             </div>
           </div>
-
-
-
 
         </div>
       </div>
 
       <div
-        className="border-t border-gray-200">
-          
+        className="border-t border-gray-200">     
           <div 
             className="text-center"
             id='news'>
             <h1>News and Events</h1>
           </div>
-          
 
         <div className="carousel rounded-2xl mx-30 h-100">
-          
           <div id="item1" className="carousel-item w-full bg-gray-400  ">
 
-            <div className="hero h-100 ">
+            <div className="content-center h-100 ">
               <div className="hero-content flex-col lg:flex-row">
                 <img
                   src={"d&d.jpg"}
@@ -121,13 +114,20 @@ export function Home() {
 
           <div id="item3" className="carousel-item w-full bg-gray-400">
 
-            <div className="hero h-100">
+            <div className="content-center h-100">
               <div className="hero-content flex-col lg:flex-row">
-  {/*               <img 
+                <img 
                   src={"warhammer40k.jpg"}
-                  className="max-w-s rounded-lg"
-                /> */}
-
+                  className="max-w-sm rounded-lg"
+                /> 
+                  <div>
+                    <h1 className="text-5xl font-bold">Open Paint Night</h1>
+                      <p className="py-6">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                      </p>
+                    <button id='heroBtn' className="btn">Register</button>
+                </div>
               </div>
             </div>
 
