@@ -162,8 +162,7 @@ const navLinks = {
     pages: [
     { name: 'Home', href: '/' },
     { name: 'Shop All', href: './shop' },
-    { name: 'About', href: './about' },
-    {name : 'Profile', href: './profile'}
+    { name: 'About', href: './about' }
   ]
 }
 
