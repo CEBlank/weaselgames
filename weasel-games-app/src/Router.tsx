@@ -10,7 +10,7 @@ import { Shop } from './shop'
 import { Events } from './events'
 import { About } from './about'
 import { Community } from './community'
-import  Profile from './Profile'
+
 
 export default function Router() {
   return (
@@ -24,7 +24,6 @@ export default function Router() {
       <Route path="/community" element={<Community />}/>
       <Route path="/about" element={<About />}/>
       <Route path="/" element={<Home />}/>
-      <Route path="/profile" element={<Profile />} />
     </Routes>
   </>
   )
