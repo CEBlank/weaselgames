@@ -11,23 +11,43 @@ export function Home() {
         <div>
           
           <div
-            className="hero max-h-600 max-w-screen"
+            className="hero min-h-screen"
             style={{
               backgroundImage:
-                  "d&d.jpg"
+                  "url(d&d.jpg)",
             }}
           >
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Welcome!</h1>
-                <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                  quasi. In deleniti eaque aut repudiandae et a id nisi.
-                </p>
-                <button id="heroBtn" className="btn mx-1">CCG Singles Catalog</button>
+                <div id='bigHero1' className='px-1 rounded-box'> 
+                  <h1 className="mb-5 text-5xl font-bold ">Welcome!</h1>
+                    <p className="mb-5">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                  </p>
+                </div>
 
-                <button id="heroBtn" className="btn">Events Schedule</button>
+                <button 
+                  id="heroBtn" 
+                  className="btn mx-1">
+                    <a 
+                      id="homeButton"
+                      href="/shop">
+                      CCG Singles Catalog
+                    </a>
+                  </button>
+
+                <button id="heroBtn" className="btn">
+                  <a
+                    id="homeButton"
+                    href='/events'>
+                    Events Schedule
+                  </a>
+                  
+                </button>
+
+
               </div>
             </div>
           </div>
@@ -50,9 +70,9 @@ export function Home() {
 
         <div className="carousel rounded-2xl mx-30 h-100">
           
-          <div id="item1" className="carousel-item w-full bg-gray-400 ">
+          <div id="item1" className="carousel-item w-full bg-gray-400  ">
 
-            <div className="hero h-100">
+            <div className="hero h-100 ">
               <div className="hero-content flex-col lg:flex-row">
                 <img
                   src={"d&d.jpg"}
@@ -64,7 +84,14 @@ export function Home() {
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                     quasi. In deleniti eaque aut repudiandae et a id nisi.
                   </p>
-                  <button id='heroBtn' className="btn">Check Events</button>
+
+                  <button id="heroBtn" className="btn">
+                    <a
+                      id="homeButton"
+                      href='/events'>
+                      Check Events
+                    </a>
+                </button>
                 </div>
               </div>
             </div>
@@ -110,9 +137,9 @@ export function Home() {
           
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" className="btn btn-xs bg-gray-400">1</a>
-          <a href="#item2" className="btn btn-xs bg-gray-400">2</a>
-          <a href="#item3" className="btn btn-xs bg-gray-400">3</a>
+          <a href="#item1" className="btn btn-xs bg-gray-200 border-gray-400">1</a>
+          <a href="#item2" className="btn btn-xs bg-gray-200 border-gray-400">2</a>
+          <a href="#item3" className="btn btn-xs bg-gray-200 border-gray-400">3</a>
         </div>
 
       </div>

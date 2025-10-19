@@ -94,8 +94,21 @@ h1 {
 
 /* Home page CSS */
 
+#news {
+  color:#853A98;
+}
+
 #heroBtn {
   background-color: #853A98;
   border: solid 1pt #572364;
 }
 
+#bigHero1 {
+  background-color: #57236475;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+#homeButton {
+  color:#D7E3F4;
+}
