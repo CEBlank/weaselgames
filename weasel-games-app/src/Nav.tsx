@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useAuth0 } from '@auth0/auth0-react';
 import './App.css'
 import {
   Dialog,
@@ -12,9 +13,14 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
+import { href } from 'react-router';
 //import { useLocation }  from 'react-router-dom';
 
+const authUser = {
 
+
+
+}
 
 const navLinks = {
 
@@ -161,6 +167,7 @@ const navLinks = {
     { name: 'Home', href: '/' },
     { name: 'Shop All', href: './shop' },
     { name: 'About', href: './about' },
+    {name : 'Profile', href: './profile'}
   ]
 }
 
@@ -374,8 +381,13 @@ const Nav = () => {
                 ))}
               </div>
             </PopoverGroup>
+
+
+
+            {/* Sign in/out and Profile */}
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+
                 <a id='login' href="#" className="text-sm font-medium">
                   {LoginButton()}
                 </a>
@@ -383,6 +395,8 @@ const Nav = () => {
                   {LogoutButton()}
                 </a>
               </div>
+
+
 
               {/* Search */}
               <div className="flex lg:ml-6">
