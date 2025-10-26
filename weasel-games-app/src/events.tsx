@@ -1,3 +1,5 @@
+import CalendarApp from "./Calendar"
+
 export function Events() {
 
   return (
@@ -8,30 +10,34 @@ export function Events() {
       <h1>Events</h1>
     </div>
       
-    <div className="grid grid-cols-9 gap-4">
-      <div className="col-start-2" >
-        <iframe 
-        
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=d2Vhc2VsZ2FtZWNvQGdtYWlsLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043" 
-        width="1000" 
-        height="1000"
-        ></iframe>
+
+<div className="flex">
+      {/* Google Calendar Basic Embed least response thing ever */}
+      <div className="mx-15 flex-auto">
+{/*         <iframe 
+          id="iFrame"
+          src="https://calendar.google.com/calendar/embed?src=weaselgameco%40gmail.com&ctz=America%2FChicago" 
+          width="1000" 
+          height="1000" 
+          >
+        </iframe> */}
+
+        <CalendarApp />
+      </div>
+      
+          <div
+      className="flex-auto">
+        <h2>Details</h2>
       </div>
 
-      <div
-      className="col-start-7 col-span-1">
 
-
-      </div>
     </div>
+
 
     <div
       id='eventsHead'
       className="mt-2 text-center">
       <h1>Past Events</h1>
-
-
-
 
     </div>
 
