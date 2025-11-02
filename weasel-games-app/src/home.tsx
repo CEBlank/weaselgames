@@ -57,85 +57,87 @@ export function Home() {
       <div
         className="border-t border-gray-200">     
           <div 
-            className="text-center"
             id='news'>
             <h1>News and Events</h1>
           </div>
 
-        <div className="carousel rounded-2xl mx-30 h-100">
-          <div id="item1" className="carousel-item w-full bg-gray-400  ">
+          <div id='carouselItems'>
+            <div className="carousel rounded-2xl max-w-300 h-100">
+              <div id="item1" className="carousel-item w-full bg-gray-400  ">
 
-            <div className="content-center h-100 ">
-              <div className="hero-content flex-col lg:flex-row">
-                <img
-                  src={"d&d.jpg"}
-                  className="max-w-sm rounded-lg"
-                />
-                <div>
-                  <h1 className="text-5xl font-bold">Tabletop Game Events</h1>
-                  <p className="py-6">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
-                  </p>
-
-                  <button id="heroBtn" className="btn">
-                    <a
-                      id="homeButton"
-                      href='/events'>
-                      Check Events
-                    </a>
-                </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div id="item2" className="carousel-item w-full bg-gray-400">  
-            <div className="hero h-100">
-              <div className="hero-content flex-col lg:flex-row">
-                <img
-                  src={"mtg.jpg"}
-                  className="max-w-sm rounded-lg"
-                />
-                <div>
-                  <h1 className="text-5xl font-bold">Upcoming Releases</h1>
-                  <p className="py-6">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
-                  </p>
-                  <button id='heroBtn' className="btn">Pre-Order</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="item3" className="carousel-item w-full bg-gray-400">
-
-            <div className="content-center h-100">
-              <div className="hero-content flex-col lg:flex-row">
-                <img 
-                  src={"warhammer40k.jpg"}
-                  className="max-w-sm rounded-lg"
-                /> 
-                  <div>
-                    <h1 className="text-5xl font-bold">Open Paint Night</h1>
+                <div className="content-center h-100 ">
+                  <div className="hero-content flex-col lg:flex-row">
+                    <img
+                      src={"d&d.jpg"}
+                      className="max-w-sm rounded-lg"
+                    />
+                    <div>
+                      <h1 className="text-5xl font-bold">Tabletop Game Events</h1>
                       <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                       </p>
-                    <button id='heroBtn' className="btn">Register</button>
+
+                      <button id="heroBtn" className="btn">
+                        <a
+                          id="homeButton"
+                          href='/events'>
+                          Check Events
+                        </a>
+                    </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div id="item2" className="carousel-item w-full bg-gray-400">  
+                <div className="hero h-100">
+                  <div className="hero-content flex-col lg:flex-row">
+                    <img
+                      src={"mtg.jpg"}
+                      className="max-w-sm rounded-lg"
+                    />
+                    <div>
+                      <h1 className="text-5xl font-bold">Upcoming Releases</h1>
+                      <p className="py-6">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                      </p>
+                      <button id='heroBtn' className="btn">Pre-Order</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+
+
+              <div id="item3" className="carousel-item w-full bg-gray-400">
+
+                <div className="content-center h-100">
+                  <div className="hero-content flex-col lg:flex-row">
+                    <img 
+                      src={"warhammer40k.jpg"}
+                      className="max-w-sm rounded-lg"
+                    /> 
+                      <div>
+                        <h1 className="text-5xl font-bold">Open Paint Night</h1>
+                          <p className="py-6">
+                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                          </p>
+                        <button id='heroBtn' className="btn">Register</button>
+                    </div>
+                  </div>
+                </div>
+
+                  
+              </div>
 
               
+            </div>
           </div>
 
-          
-        </div>
         <div className="flex w-full justify-center gap-2 py-2">
           <a href="#item1" className="btn btn-xs bg-gray-200 border-gray-400">1</a>
           <a href="#item2" className="btn btn-xs bg-gray-200 border-gray-400">2</a>
