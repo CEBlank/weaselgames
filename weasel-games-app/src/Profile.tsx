@@ -1,4 +1,4 @@
-/* 
+
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -20,10 +20,9 @@ const Profile = () => {
       </div>
     );
   } else {
-    return <button onClick={() => loginWithRedirect()}>Log in</button>;
+    return <button className="mt-2" onClick={() => loginWithRedirect()}>Log in</button>;
   }
 };
 
 export default Profile; 
 
-*/
