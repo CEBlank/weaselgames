@@ -97,7 +97,6 @@ h1 {
 
 #news {
   color:#853A98;
-  text-align: center;
 }
 
 #heroBtn {
@@ -113,10 +112,6 @@ h1 {
 
 #homeButton {
   color:#D7E3F4;
-}
-
-#carouselItems {
-  text-align: center;
 }
 
 /* Events page CSS */
