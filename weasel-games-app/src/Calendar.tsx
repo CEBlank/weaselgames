@@ -22,6 +22,12 @@ function CalendarApp() {
         start: Temporal.PlainDate.from('2025-10-31'),
         end: Temporal.PlainDate.from('2025-10-31'),
       },
+        {
+        id: '2',
+        title: 'Casual Card Crash',
+        start: Temporal.ZonedDateTime.from('2025-11-01T12:00:00+01:00[Europe/Berlin]'),
+        end: Temporal.ZonedDateTime.from('2025-11-01T13:00:00+01:00[Europe/Berlin]'),
+      },
     ],
     plugins: [eventsService]
   })
@@ -32,7 +38,7 @@ function CalendarApp() {
   }, [])
 
   return (
-    <div id="calendar">
+    <div id="calendar" className='flex'>
       <ScheduleXCalendar calendarApp={calendar} />
     </div>
   )
