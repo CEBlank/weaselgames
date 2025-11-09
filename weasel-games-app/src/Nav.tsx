@@ -201,7 +201,7 @@ const Nav = () => {
 
             {/* MOBILE NAV */}
           <div 
-            className="px-4 text-lg"
+            className="px-4 text-lg min-h-full"
             id='mobileMenu'
           >
               <div>
@@ -292,6 +292,8 @@ const Nav = () => {
 
             {/* Logo */}
             <div className="ml-4 flex lg:ml-0">
+              <h3 className='text-center content-center' 
+                  id="logoHeader">Weasel <br /> Games</h3>
               <a href="/">
                 <span className="sr-only">Weasel Games</span>
                 <img

@@ -11,21 +11,27 @@ import Router from './Router';
 
 
 createRoot(document.getElementById('root')!).render(
+  
   <StrictMode>
-    <BrowserRouter>
+    <div className='container max-w-full'>
+    
+    
+      <BrowserRouter>
 
-      <Auth0Provider
-          domain="dev-ug4olss0uf5d2qw0.us.auth0.com"
-          clientId="dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0"
-          authorizationParams={{
-            redirect_uri: 'https://weaselgames.vercel.app/'
-          }}
-        >
+        <Auth0Provider
+            domain="dev-ug4olss0uf5d2qw0.us.auth0.com"
+            clientId="dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0"
+            authorizationParams={{
+              redirect_uri: 'https://weaselgames.vercel.app/'
+            }}
+          >
 
-        <Router />
+          <Router />
 
-      </Auth0Provider>
-          
-    </BrowserRouter>
-  </StrictMode>,
+        </Auth0Provider>
+            
+      </BrowserRouter>       
+      </div>
+  </StrictMode>
+
 )

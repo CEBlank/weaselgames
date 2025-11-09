@@ -4,7 +4,6 @@
 :root {
   font-family: Verdana, Tahoma, Serif;
   background-color: #D7E3F4;
-
 }
 
 header {
@@ -52,6 +51,11 @@ button:hover {
   color: #fff;
 }
 
+#logoHeader {
+  color: #D7E3F4;
+  font-weight: bold;
+  font-size: large;
+}
 
 #createAccount {
   color: #D8e3f5;
@@ -89,6 +93,10 @@ h1 {
   color: #853A98;
 }
 
+#mobileMenu {
+  background-color: #D7E3F4;
+}
+
 #mobileItem {
   color: #853A98;
 }
@@ -112,6 +120,10 @@ h1 {
 
 #homeButton {
   color:#D7E3F4;
+}
+
+#carouselHome {
+  align-content:center;
 }
 
 /* Events page CSS */
