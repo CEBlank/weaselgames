@@ -92,6 +92,8 @@ export function Home() {
                     </div>
                 </div>
 
+
+{/* Add modals! */}
               <div id="item2" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
@@ -100,7 +102,7 @@ export function Home() {
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
-                      <h2 className="card-title">Tabletop Game Events</h2>
+                      <h2 className="card-title">Card Tournaments</h2>
                       <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -109,8 +111,8 @@ export function Home() {
                       <button id="heroBtn" className="btn">
                         <a
                           id="homeButton"
-                          href='/events'>
-                          Check Events
+                          href='#'>
+                          Registration
                         </a>
                     </button>
                     </div>
@@ -124,7 +126,7 @@ export function Home() {
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
-                      <h2 className="card-title">Tabletop Game Events</h2>
+                      <h2 className="card-title">Open Paint Nights</h2>
                       <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -133,8 +135,8 @@ export function Home() {
                       <button id="heroBtn" className="btn">
                         <a
                           id="homeButton"
-                          href='/events'>
-                          Check Events
+                          href='#'>
+                          Details
                         </a>
                     </button>
                     </div>

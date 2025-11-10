@@ -82,7 +82,7 @@ export function Events() {
 
       <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div className="card bg-gray-400 w-96 shadow-sm ">
+        <div className="card bg-gray-400 w-96 shadow-sm mb-3">
           <div className="card-body">
             <h2 className="card-title">Card Tournaments 2025</h2>
             <p>
@@ -96,7 +96,7 @@ export function Events() {
           </figure>
         </div>
 
-        <div className="card bg-gray-400 w-96 shadow-sm ">
+        <div className="card bg-gray-400 w-96 shadow-sm mb-3">
           <div className="card-body">
             <h2 className="card-title">Yu-Gi-Oh Casual Night</h2>
             <p>
@@ -110,7 +110,7 @@ export function Events() {
           </figure>
         </div>
 
-        <div className="card bg-gray-400 w-96 shadow-sm ">
+        <div className="card bg-gray-400 w-96 shadow-sm mb-3 ">
           <div className="card-body">
             <h2 className="card-title">Dungeons&Dragons: Adventure League</h2>
             <p>
