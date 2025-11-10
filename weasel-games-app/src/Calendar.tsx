@@ -25,8 +25,8 @@ function CalendarApp() {
         {
         id: '2',
         title: 'Casual Card Crash',
-        start: Temporal.ZonedDateTime.from('2025-11-01T12:00:00+01:00[Europe/Berlin]'),
-        end: Temporal.ZonedDateTime.from('2025-11-01T13:00:00+01:00[Europe/Berlin]'),
+        start: Temporal.ZonedDateTime.from('2025-11-11T12:00:00+01:00[Europe/Berlin]'),
+        end: Temporal.ZonedDateTime.from('2025-11-11T13:00:00+01:00[Europe/Berlin]'),
       },
     ],
     plugins: [eventsService]

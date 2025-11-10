@@ -146,6 +146,10 @@ h1 {
   text-align: center;
 }
 
+#iFrame {
+  justify-content: center;
+  border-radius: 2%;
+}
 
 #detailsContent {
   margin-left: 5em;

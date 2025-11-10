@@ -13,14 +13,15 @@ export function Events() {
       <h1>Events</h1>
     </div>
       
-    <div  id="container">
-      <div id="iFrame" className="flex sm:flex-shrink">
+    <div  id="eventContainer">
+      <div id="iFrame" className="flex min-w-full md:flex-shrink m:flex-shrink content-center mx-auto">
       {/* Google Calendar Basic Embed least response thing ever */}
-{/*       <div
+      <div
       id="calendarFrame"
-      className="flex-auto ">
+      className="flex-box">
         <iframe 
           id="iFrame"
+          className="max-w-full min-h-100"
           src="https://calendar.google.com/calendar/embed?src=weaselgameco%40gmail.com&ctz=America%2FChicago" 
           width="1000" 
           height="1000" 
@@ -28,8 +29,8 @@ export function Events() {
         </iframe> 
 
       
-      </div> */}
-        <CalendarApp />
+      </div> 
+        {/* <CalendarApp /> */}
         </div>
 
     <div
@@ -40,7 +41,7 @@ export function Events() {
 
         <div
           id="detailsContent" 
-          className="rounded-2xl max-w-full h-50 bg-gray-400 md:flex-wrap">
+          className="rounded-2xl max-w-full min-h-50 bg-gray-400 md:flex-wrap md:py-3">
             <p className="my-3 py-1">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
             </p>
