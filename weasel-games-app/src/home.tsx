@@ -64,23 +64,19 @@ export function Home() {
           </div>
 
 
-        <div className="grid grid-cols-6 gap-4 sm:grid-cols-2">
-          <div className="col-span-3 sm:col-span-6">
+        <div
+          id="homeCards"
+          className="flex flex-col justify-center">
 
-            <div 
-              className="carousel rounded-2xl"
-              >
+              <div id="item1" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
-              <div id="item1" className="carousel-item w-full bg-gray-400 ">
-
-                <div className="content-center lg:max-h-4xl md:max-h-2xl md:items-center sm:text-center">
-                  <div className="hero-content flex-col lg:flex-row">
+                  <figure>
                     <img
                       src={"d&d.jpg"}
-                      className="max-w-sm rounded-lg"
-                    />
-                    <div>
-                      <h1 className="text-5xl font-bold">Tabletop Game Events</h1>
+                      className="max-w-sm rounded-lg"/>
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title">Tabletop Game Events</h2>
                       <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -94,63 +90,58 @@ export function Home() {
                         </a>
                     </button>
                     </div>
-                  </div>
                 </div>
 
-              </div>
+              <div id="item2" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
-
-              <div id="item2" className="carousel-item w-full bg-gray-400">  
-                <div className="hero h-100">
-                  <div className="hero-content flex-col lg:flex-row">
+                  <figure>
                     <img
                       src={"mtg.jpg"}
-                      className="max-w-sm rounded-lg"
-                    />
-                    <div>
-                      <h1 className="text-5xl font-bold">Upcoming Releases</h1>
+                      className="max-w-sm rounded-lg"/>
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title">Tabletop Game Events</h2>
                       <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                       </p>
-                      <button id='heroBtn' className="btn">Pre-Order</button>
+
+                      <button id="heroBtn" className="btn">
+                        <a
+                          id="homeButton"
+                          href='/events'>
+                          Check Events
+                        </a>
+                    </button>
                     </div>
-                  </div>
                 </div>
-              </div>
 
+                <div id="item3" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
-              <div id="item3" className="carousel-item w-full bg-gray-400">
-
-                <div className="content-center h-100">
-                  <div className="hero-content flex-col lg:flex-row">
-                    <img 
+                  <figure>
+                    <img
                       src={"warhammer40k.jpg"}
-                      className="max-w-sm rounded-lg"
-                    /> 
-                      <div>
-                        <h1 className="text-5xl font-bold">Open Paint Night</h1>
-                          <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                          </p>
-                        <button id='heroBtn' className="btn">Register</button>
-                    </div>
-                  </div>
-                </div>
+                      className="max-w-sm rounded-lg"/>
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title">Tabletop Game Events</h2>
+                      <p className="py-6">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                      </p>
 
-                  
-              </div>
+                      <button id="heroBtn" className="btn">
+                        <a
+                          id="homeButton"
+                          href='/events'>
+                          Check Events
+                        </a>
+                    </button>
+                    </div>
+                </div>
+              
             </div>
           </div>
-        </div>
-        <div className="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" className="btn btn-xs bg-gray-200 border-gray-400">1</a>
-          <a href="#item2" className="btn btn-xs bg-gray-200 border-gray-400">2</a>
-          <a href="#item3" className="btn btn-xs bg-gray-200 border-gray-400">3</a>
-        </div>
-
-      </div>
 
     </>
   )

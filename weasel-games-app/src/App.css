@@ -126,6 +126,10 @@ h1 {
   align-content:center;
 }
 
+#homeCards {
+  margin-inline: 1pt;
+}
+
 /* Events page CSS */
 
 #eventsHead {
