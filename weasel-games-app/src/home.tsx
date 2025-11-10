@@ -63,7 +63,7 @@ export function Home() {
             <h1>News and Events</h1>
           </div>
 
-
+{/* Responsive design goes wonky at 417 */}
         <div
           id="homeCards"
           className="flex flex-col justify-center">
