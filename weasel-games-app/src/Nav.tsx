@@ -11,9 +11,9 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import LoginButton from './LoginButton';
-import LogoutButton from './LogOutButton';
-
+//import LoginButton from './LoginButton';
+//import LogoutButton from './LogOutButton';
+import { authUser } from './userAuth';
 //import { useLocation }  from 'react-router-dom';
 
 
@@ -163,7 +163,6 @@ const navLinks = {
     { name: 'Home', href: '/' },
     { name: 'Shop All', href: './shop' },
     { name: 'About', href: './about' },
-    { name: 'Profile', href: './profile' }
   ]
 }
 
@@ -383,16 +382,23 @@ const Nav = () => {
 
 
             {/* Sign in/out and Profile */}
+
+  
+
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                
+                <a>
+                  {authUser()}
+                </a>
 
-                <a id='login' href="#" className="text-sm font-medium">
+              {/*  <a id='login' href="#" className="text-sm font-medium">
                   {LoginButton()}
                 </a>
                 <a id='logout' href="#" className="text-sm font-medium">
                   {LogoutButton()}
-                </a>
-              </div>
+                </a> */}
+              </div> 
 
 
 
