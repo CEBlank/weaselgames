@@ -1,12 +1,15 @@
 import { useAuth0 } from "@auth0/auth0-react";
+//import { ManagementClient } from "auth0-js";
 
 
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogOutButton";
 
-
 export function authUser() {
   const { user, isAuthenticated } = useAuth0();
+
+  //console.log("user everything: ", user);
+  //console.log("user role? ", user.role)
 
   return (
     isAuthenticated && user ? (
@@ -22,7 +25,7 @@ export function authUser() {
           </a> 
         </div>
 
-        <div className="border-l">
+        <div className="border-l pl-2">
           {LogoutButton()}
         </div>
         

@@ -4,8 +4,6 @@ import { PhotoIcon } from "@heroicons/react/24/outline";
 export function Profile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
-  console.log(user);
-
   if (isLoading) {
     return <div className="loading-text">Loading profile...</div>;
   };
@@ -86,7 +84,7 @@ export function Profile() {
                       className="block text-sm/6 font-medium">
                       Profile Picture
                     </label>
-                    <div className="mt-2 flex items-center gap-x-3">
+                    <div className="mt-2 flex justify-start gap-x-3">
 
                  {/* Put the user pfp here */}
 
@@ -104,14 +102,6 @@ export function Profile() {
                         aria-hidden="true" 
                         className="size-12" 
                         id="photoIcon"/> */}
-
-                {/* Form Button!!!! Need a backend! */}
-                      <button
-                        id="heroBtn"
-                        className="btn"
-                      >
-                        Change
-                      </button>
                     </div>
 
                     <div className="col-span-full">
@@ -121,7 +111,7 @@ export function Profile() {
                         className="block text-sm/6 font-medium">
                         Change Profile Picture
                       </label>
-                      <div className="mt-2 flex justify-center rounded-lg border border-dashed border-white/25 px-6 py-10">
+                      <div className="mt-2 flex justify-start rounded-lg border border-dashed border-white/25 px-6 py-10">
                         <div className="text-center">
                           <PhotoIcon 
                             id="photoIcon"
@@ -147,17 +137,19 @@ export function Profile() {
 
                 </div>
 
-              <div className="mt-6 flex items-center justify-end gap-x-6 mb-2">
+
+                {/* Form Buttons!!!! Need a backend! */}
+              <div className="mt-6 flex justify-between gap-x-6 mb-2">
                 <button 
                   id="cancelBtn"
                   type="button" 
-                  className="btn">
+                  className="btn justify-start">
                   Cancel
                 </button>
                 <button
                   id="heroBtn"
                   type="submit"
-                  className="btn"
+                  className="btn justify-end"
                 >
                   Save
                 </button>
