@@ -23,7 +23,6 @@ createRoot(document.getElementById('root')!).render(
             redirect_uri: window.location.origin
           }}
         >
-
           <Router />
 
         </Auth0Provider>

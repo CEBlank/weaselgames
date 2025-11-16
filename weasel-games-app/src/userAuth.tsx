@@ -11,6 +11,13 @@ export function authUser() {
   //console.log("user everything: ", user);
   //console.log("user role? ", user.role)
 
+  const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
+
+  console.log("domain:", domain);
+  console.log("client ID:", clientId)
+
+
   return (
     isAuthenticated && user ? (
       <div
