@@ -111,12 +111,12 @@ export function Profile() {
                         className="block text-sm/6 font-medium">
                         Change Profile Picture
                       </label>
-                      <div className="mt-2 flex justify-start rounded-lg border border-dashed border-white/25 px-6 py-10">
-                        <div className="text-center">
+                      <div className="mt-2 flex justify-start rounded-lg border border-dashed border-grey-300 px-6 py-10">
+                        <div className="justify-start">
                           <PhotoIcon 
                             id="photoIcon"
                             aria-hidden="true" 
-                            className="mx-auto size-12" />
+                            className="size-12" />
                           <div className="mt-4 flex text-sm/6">
                             <label
                               id="profileLabel"

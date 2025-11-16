@@ -8,8 +8,6 @@ import { Auth0Provider } from '@auth0/auth0-react';
 //import Nav from './Nav'
 import Router from './Router';
 
-
-
 createRoot(document.getElementById('root')!).render(
   
   <StrictMode>
