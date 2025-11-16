@@ -209,3 +209,18 @@ h2 {
 form {
   color: #853A98;
 }
+
+#orderHistory {
+  color:#853A98;
+  font-size: small;
+}
+
+#profileRoute {
+  color: #D7E3F4;
+  justify-content: center;
+}
+
+#userIcon {
+  color: #D7E3F4;
+  justify-content: center;
+}

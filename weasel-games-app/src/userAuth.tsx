@@ -10,8 +10,22 @@ export function authUser() {
 
   return (
     isAuthenticated && user ? (
-      <div>       
-        {LogoutButton()}
+      <div
+        id="profileRoute"
+        className="flex">  
+        <div
+          className="mx-3">
+          <a 
+            href="/profile"
+            id="userIcon">
+                Account
+          </a> 
+        </div>
+
+        <div className="border-l">
+          {LogoutButton()}
+        </div>
+        
       </div>
     ) : 
       <div>

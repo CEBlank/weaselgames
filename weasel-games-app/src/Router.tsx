@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom';
 //import ReactDOM from 'react-dom/client';
 
@@ -13,13 +12,14 @@ import { About } from './about'
 import { Community } from './community'
 import { Profile } from './Profile';
 
+
 // import { callMongo } from './dbCall';
 
 
 export default function Router() {
+
   return (
   <>
-    {/* {pingDB()} */}
     <Nav/>
     <Routes>
       <Route index element={<Home />}/>
@@ -28,9 +28,12 @@ export default function Router() {
       <Route path="/events" element={<Events />}/>
       <Route path="/community" element={<Community />}/>
       <Route path="/about" element={<About />}/>
-
-      <Route path="/profile" element={<Profile />}/> {/* Need to make THIS one protected route */}
       <Route path="/" element={<Home />}/>
+
+      {/* Need to make THESE protected routes */}
+      <Route path="/profile" element={<Profile />}/> 
+      {/* <Route path="/admin" element={<Admin />}/>  */}
+
     </Routes>
   </>
   )
