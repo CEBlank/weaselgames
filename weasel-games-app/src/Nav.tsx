@@ -17,7 +17,6 @@ import { authUser } from './userAuth';
 //import { useLocation }  from 'react-router-dom';
 
 
-
 const navLinks = {
 
   categories: [
@@ -382,8 +381,6 @@ const Nav = () => {
 
 
             {/* Sign in/out and Profile */}
-
-  
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">

@@ -24,5 +24,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/mongodb.ts"]
+  "include": ["src", "src/mongodb.ts", "src/pingDB.js"]
 }

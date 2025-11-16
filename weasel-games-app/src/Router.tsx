@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 import Nav from './Nav'
+// import pingDB from './testDBcall.js'
 
 import { Home } from './home'
 import { Shop } from './shop'
@@ -12,10 +13,13 @@ import { About } from './about'
 import { Community } from './community'
 import { Profile } from './Profile';
 
+// import { callMongo } from './dbCall';
+
 
 export default function Router() {
   return (
   <>
+    {/* {pingDB()} */}
     <Nav/>
     <Routes>
       <Route index element={<Home />}/>

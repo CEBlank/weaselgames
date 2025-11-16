@@ -171,4 +171,41 @@ h2 {
   color: #572364;
 }
 
+/* Profile Page */
 
+#profileDIV {
+  justify-content: center;
+}
+
+#pfp {
+  width: 110px; 
+  height: 110px;
+  border-Radius: 50%;
+  object-Fit: 'cover';
+  border: 3px solid #63b3ed
+}
+
+#profileName {
+  font-size: large;
+  font-weight: bold;
+}
+
+#profileEmail {
+  color: #853A98;
+}
+
+#profileLabel {
+  color: #572364;
+}
+
+#displayName {
+  color:#572364;
+}
+
+#photoIcon {
+  color: #572364;
+}
+
+form {
+  color: #853A98;
+}

@@ -6,8 +6,16 @@
   ],
 
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "customConditions": ["module"],
+    "outDir": "./dist",
+    "allowJs": true,
+    "target": "es5",
     "types": [
-      "node"
+      "node",
     ],
   },
 }
