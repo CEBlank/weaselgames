@@ -1,4 +1,5 @@
 {
 "VITE_AUTH0_DOMAIN" : "dev-ug4olss0uf5d2qw0.us.auth0.com",
-"VITE_AUTH0_CLIENT_ID" : "dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0"
+"VITE_AUTH0_CLIENT_ID" : "dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0",
+"Admin_Role_ID" : "rol_HGYqIPa43cOlfCPC"
 }
