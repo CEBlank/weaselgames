@@ -11,6 +11,7 @@ import { Events } from './events'
 import { About } from './about'
 import { Community } from './community'
 import { Profile } from './Profile';
+import { Admin } from './Admin';
 
 
 // import { callMongo } from './dbCall';
@@ -32,7 +33,7 @@ export default function Router() {
 
       {/* Need to make THESE protected routes */}
       <Route path="/profile" element={<Profile />}/> 
-      {/* <Route path="/admin" element={<Admin />}/>  */}
+      <Route path="/admin" element={<Admin />}/>
 
     </Routes>
   </>

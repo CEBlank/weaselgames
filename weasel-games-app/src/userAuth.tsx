@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 //import { ManagementClient } from "auth0-js";
-import { VITE_AUTH0_DOMAIN, VITE_AUTH0_CLIENT_ID } from '../auth0.config.json';
+//import { Admin_Role_ID } from '../auth0.config.json';
 
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogOutButton";
@@ -8,15 +8,15 @@ import LogoutButton from "./LogOutButton";
 export function authUser() {
   const { user, isAuthenticated } = useAuth0();
 
-  //console.log("user everything: ", user);
-  //console.log("user role? ", user.role)
+  console.log("user everything: ", user);
 
-  const domain = VITE_AUTH0_DOMAIN;
-  const clientId = VITE_AUTH0_CLIENT_ID;
 
-  console.log("domain:", domain);
+/*   const domain = VITE_AUTH0_DOMAIN;
+  const clientId = VITE_AUTH0_CLIENT_ID; */
+
+/*   console.log("domain:", domain);
   console.log("client ID:", clientId)
-
+ */
 
   return (
     isAuthenticated && user ? (
