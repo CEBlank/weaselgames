@@ -8,7 +8,7 @@ import LogoutButton from "./LogOutButton";
 export function authUser() {
   const { user, isAuthenticated } = useAuth0();
 
-  console.log("user everything: ", user);
+  //console.log("user everything: ", user);
 
 
 /*   const domain = VITE_AUTH0_DOMAIN;

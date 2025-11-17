@@ -59,6 +59,7 @@ export function Profile() {
                       htmlFor="username" 
                       className="block text-sm/6 font-medium"
                       id="profileLabel">
+                      {user.name}
                       {user.username}
                     </label>
 
