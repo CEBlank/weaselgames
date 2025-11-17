@@ -7,6 +7,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 //import Nav from './Nav'
 import Router from './Router';
+import { VITE_AUTH0_DOMAIN, VITE_AUTH0_CLIENT_ID } from '../auth0.config.json';
 
 createRoot(document.getElementById('root')!).render(
   
@@ -17,8 +18,12 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
 
         <Auth0Provider
-          domain={import.meta.env.VITE_AUTH0_DOMAIN}
-          clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
+          domain={VITE_AUTH0_DOMAIN}
+          clientId={VITE_AUTH0_CLIENT_ID}
+
+/*           domain={import.meta.env.VITE_AUTH0_DOMAIN}
+          clientId={import.meta.env.VITE_AUTH0_CLIENT_ID} */
+
           authorizationParams={{
             redirect_uri: window.location.origin
           }}

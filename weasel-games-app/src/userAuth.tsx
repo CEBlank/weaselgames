@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 //import { ManagementClient } from "auth0-js";
-
+import { VITE_AUTH0_DOMAIN, VITE_AUTH0_CLIENT_ID } from '../auth0.config.json';
 
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogOutButton";
@@ -11,8 +11,8 @@ export function authUser() {
   //console.log("user everything: ", user);
   //console.log("user role? ", user.role)
 
-  const domain = import.meta.env.VITE_AUTH0_DOMAIN;
-  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
+  const domain = VITE_AUTH0_DOMAIN;
+  const clientId = VITE_AUTH0_CLIENT_ID;
 
   console.log("domain:", domain);
   console.log("client ID:", clientId)
